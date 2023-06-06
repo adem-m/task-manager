@@ -1,7 +1,7 @@
 package com.esgi.domain.usecases;
 
 import com.esgi.domain.Clock;
-import com.esgi.domain.TaskNotFoundException;
+import com.esgi.domain.exceptions.TaskNotFoundException;
 import com.esgi.domain.TaskRepository;
 import com.esgi.domain.models.Task;
 import com.esgi.domain.models.TaskList;

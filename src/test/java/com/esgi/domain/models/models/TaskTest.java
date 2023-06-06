@@ -1,7 +1,7 @@
 package com.esgi.domain.models.models;
 
 import com.esgi.domain.Clock;
-import com.esgi.domain.TaskAlreadyDoneException;
+import com.esgi.domain.exceptions.TaskAlreadyDoneException;
 import com.esgi.domain.TaskRepository;
 import com.esgi.domain.models.Status;
 import com.esgi.domain.models.Task;

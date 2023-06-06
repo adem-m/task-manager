@@ -1,4 +1,4 @@
-package com.esgi.domain.models;
+package com.esgi.domain.models.stubs;
 
 import com.esgi.domain.Clock;
 

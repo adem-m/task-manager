@@ -1,8 +1,13 @@
-package com.esgi.domain.models;
+package com.esgi.domain.models.models;
 
 import com.esgi.domain.Clock;
 import com.esgi.domain.TaskAlreadyDoneException;
 import com.esgi.domain.TaskRepository;
+import com.esgi.domain.models.Status;
+import com.esgi.domain.models.Task;
+import com.esgi.domain.models.stubs.FakeClock;
+import com.esgi.domain.models.stubs.FakeTaskRepository;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +29,7 @@ public class TaskTest {
 
         assertEquals("title", task.getTitle());
         assertEquals("content", task.getContent());
-        assertEquals(Status.TODO, task.getStatus());
+        Assert.assertEquals(Status.TODO, task.getStatus());
         assertEquals(clock.now(), task.getCreationDate());
         assertNull(task.getDueDate());
         assertNull(task.getCloseDate());

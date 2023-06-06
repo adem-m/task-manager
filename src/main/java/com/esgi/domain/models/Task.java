@@ -5,7 +5,6 @@ import com.esgi.domain.TaskAlreadyDoneException;
 import com.esgi.domain.TaskRepository;
 
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Task {
     private final Clock clock;

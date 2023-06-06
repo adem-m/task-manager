@@ -1,7 +1,12 @@
-package com.esgi.domain.models;
+package com.esgi.domain.models.models;
 
 import com.esgi.domain.Clock;
 import com.esgi.domain.TaskRepository;
+import com.esgi.domain.models.Task;
+import com.esgi.domain.models.TaskList;
+import com.esgi.domain.models.stubs.FakeClock;
+import com.esgi.domain.models.stubs.FakeTaskRepository;
+import com.esgi.domain.models.stubs.LaterFakeClock;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,6 +1,8 @@
-package com.esgi.domain.models;
+package com.esgi.domain.models.stubs;
 
 import com.esgi.domain.TaskRepository;
+import com.esgi.domain.models.Task;
+import com.esgi.domain.models.TaskList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,11 @@ public class FakeTaskRepository implements TaskRepository {
 
     @Override
     public void save(Task task) {
-        tasks.add(task);
+        if (!tasks.contains(task)) {
+            tasks.add(task);
+        } else {
+            tasks.set(tasks.indexOf(task), task);
+        }
     }
 
     @Override

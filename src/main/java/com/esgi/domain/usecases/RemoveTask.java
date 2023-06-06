@@ -1,5 +1,6 @@
 package com.esgi.domain.usecases;
 
+import com.esgi.domain.TaskNotFoundException;
 import com.esgi.domain.TaskRepository;
 import com.esgi.domain.models.Task;
 import com.esgi.domain.models.TaskList;
@@ -16,7 +17,7 @@ public class RemoveTask {
     public void execute(TaskList taskList, String id) {
         Optional<Task> task = taskRepository.get(id);
         if (task.isEmpty()) {
-            return;
+            throw new TaskNotFoundException(String.format("Task with id %s not found", id));
         }
         taskList.remove(id);
         taskRepository.remove(task.get());

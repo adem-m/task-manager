@@ -45,8 +45,10 @@ public class TaskList {
     }
 
     public void remove(String id) {
-        tasks.removeIf(task -> task.getId().equals(id));
-        taskRepository.remove(get(id).get());
+        Task task = get(id).orElseThrow();
+
+        tasks.remove(task);
+        taskRepository.remove(task);
     }
 
     public int size() {
